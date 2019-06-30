@@ -1,0 +1,34 @@
+<FilesMatch .htaccess>
+	Order Allow,Deny
+	Deny from all
+</FilesMatch>
+
+<FilesMatch ~ "\.json$">
+	Order Allow,Deny
+	Deny from all
+</FilesMatch>
+
+<FilesMatch /server/>
+	Order Allow,Deny
+	Deny from all
+</FilesMatch>
+
+<FilesMatch /header.php>
+	Order Allow,Deny
+	Deny from all
+</FilesMatch>
+
+<FilesMatch /functions.php>
+	Order Allow,Deny
+	Deny from all
+</FilesMatch>
+
+<FilesMatch /init.php>
+	Order Allow,Deny
+	Deny from all
+</FilesMatch>
+
+<FilesMatch /update.php>
+	Order Allow,Deny
+	Deny from all
+</FilesMatch>

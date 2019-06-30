@@ -1,0 +1,71 @@
+*, ::after, ::before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*--动画定义*/
+@keyframes fadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+body {
+	background: #f0f0f0;
+}
+
+.header {
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 35vh;
+	text-align: center;
+	background: linear-gradient(85deg,#0D47A1 20%, #64B5F6 100%) !important;
+	overflow: auto;
+}
+
+.header h1 {
+	color: #fff;
+	animation: fadeInTop .5s ease;
+	font-size: 3em;
+	white-space: nowrap;
+	overflow: hidden;
+	font-weight: unset;
+	margin-top: 10vh;
+}
+
+
+#main {
+	animation: fadeIn .75s ease;
+	position: relative;
+	top: -5vh;
+	left: 0;
+	right: 0;
+}
+
+.stauts-card {
+	margin-top: 0.5em;
+}
+
+.mdui-row, [class*="mdui-row-"] {
+	margin-left: 0;
+	margin-right: 0;
+}
