@@ -55,7 +55,7 @@
 	<?php }else{ ?>
 		<button id="status" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-red"><i class="mdui-icon material-icons">warning</i></button>
 	<?php } ?>
-		<script src="./mdui-v0.4.2/js/mdui.min.js"></script>
+		<script src="./libs/mdui-v0.4.2/js/mdui.min.js"></script>
 		<script>
 			var $$ = mdui.JQ;
 
