@@ -69,3 +69,17 @@ body {
 	margin-left: 0;
 	margin-right: 0;
 }
+
+.save-blockquote {
+	margin: 10px;
+	padding: 20px;
+	border-left: #4CAF50 solid 3px;
+	background: #81C7848A;
+}
+
+.down-blockquote {
+	margin: 10px;
+	padding: 20px;
+	border-left: #F44336 solid 3px;
+	background: #E573736E;
+}

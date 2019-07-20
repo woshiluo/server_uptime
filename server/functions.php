@@ -9,7 +9,7 @@
 	function get_status($uuid) {
 		global $work_dir;
 		$_client = file_get_contents( $work_dir . '/server/' . $uuid . '.json' );
-		$clent = json_decode($_client);
+		$client = json_decode($_client);
 
 		if( get_time() - (int)($client -> time) >= 900 ){
 			return false;

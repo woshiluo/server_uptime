@@ -7,6 +7,10 @@
 
 	foreach($clients as $uuid => $client) {
 		$groups[ $client -> Group ][ $client -> Name ] = [ $uuid, $client -> Status ];
+		if( isset($save[ $client -> Group ]) == false ) 
+			$save[ $client -> Group ] = true;
+		$save[ $client -> Group ] = ( $save[ $client -> Group ] && get_status( $uuid ) );
+//		echo $client -> Group . " " . (int)$save[ $client -> Group ] . " " . (int)get_status( $uuid ) . " " .$client -> Name . "<br/>";
 	}
 
 	unset( $clients ); unset( $_clients );
@@ -20,6 +24,22 @@
 						<div class="mdui-card-primary-title"><?php echo $name; ?></div>
 					</div>
 					<div class="mdui-card-content">
+					<blockquote class="<?php echo $save[ $name ]? 'save-blockquote': 'down-blockquote'?>">
+							<?php 
+								if( $save[ $name ] ) {
+							?>
+									<i class="mdui-text-color-green mdui-icon material-icons">done</i>
+							<?php
+									echo '当前组下服务全部正常';
+								}
+								else {
+							?>
+									<i class="mdui-text-color-red mdui-icon material-icons">clear</i>
+							<?php
+									echo '这个组下出现了错误的说';
+								}
+							?>
+						</blockquote>
 						<div class="mdui-table-fluid mdui-shadow-1">
 							<table class="mdui-table">
 								<thead>

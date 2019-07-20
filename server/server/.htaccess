@@ -3,27 +3,32 @@
 	Deny from all
 </FilesMatch>
 
-<FilesMatch "\.json$">
+<FilesMatch ~ "\.json$">
 	Order Allow,Deny
 	Deny from all
 </FilesMatch>
 
-<Files header.php>
+<FilesMatch /server/>
 	Order Allow,Deny
 	Deny from all
-</Files>
+</FilesMatch>
 
-<Files functions.php>
+<FilesMatch /header.php>
 	Order Allow,Deny
 	Deny from all
-</Files>
+</FilesMatch>
 
-<Files init.php>
+<FilesMatch /functions.php>
 	Order Allow,Deny
 	Deny from all
-</Files>
+</FilesMatch>
 
-<Files update.php>
+<FilesMatch /init.php>
 	Order Allow,Deny
 	Deny from all
-</Files>
+</FilesMatch>
+
+<FilesMatch /update.php>
+	Order Allow,Deny
+	Deny from all
+</FilesMatch>
